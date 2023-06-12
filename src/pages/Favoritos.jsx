@@ -13,6 +13,12 @@ const Favoritos = () => {
       </div>
       <div className="favorito-contenedor__galeria">
         <div className="favorito-grilla__galeria">
+
+          {favorites.length === 0 && (
+            <article>No hay Favoritos señalados. Seleccione</article>
+          )}
+
+          {/* inicio iteracion de favoritos */}
           {favorites.map((imagen) => (
             <div
               key={imagen.id}
@@ -26,6 +32,7 @@ const Favoritos = () => {
               />
             </div>
           ))}
+          {/* final iteracion de favoritos */}
         </div>
       </div>
     </>
